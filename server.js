@@ -96,5 +96,5 @@ app.put('/api/login/:id', (req, res) => {
 });
 //run the server
 app.listen(port, () => {
-    console.log('Server running in https://localhost:${port}');
+    console.log(`Server running in https://localhost:${port}`);
 });
