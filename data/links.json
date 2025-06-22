@@ -1,12 +1,22 @@
 [
-    {
-        "id":1,
-        "title":"Meu Portfolio",
-        "url":"https://github.com/Bytt13"
-    },
-    {
-        "id":2,
-        "title":"Meu Instagram",
-        "url":"https://www.linkedin.com/in/lucas-chaves-73371634b/"
-    }
+  {
+    "id": 1,
+    "title": "Meu Portfolio",
+    "url": "https://github.com/Bytt13"
+  },
+  {
+    "id": 2,
+    "title": "Meu Linkedin",
+    "url": "https://www.linkedin.com/in/lucas-chaves-73371634b/"
+  },
+  {
+    "id": 1750572386431,
+    "title": "Velho-Oeste",
+    "url": "https://www.youtube.com/watch?v=L4zUPWiI2cQ&list=RDvc8SqYe8ALU&index=13"
+  },
+  {
+    "id": 1750572427461,
+    "title": "Wikis",
+    "url": "https://fextralife.com"
+  }
 ]

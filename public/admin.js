@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const linktTitleInput = document.getElementById('link-title');
     const URL_input = document.getElementById('link-url');
     const mainButton = document.getElementById('main-button');
-    const linkContainer = document.getElementById('current-links');
+    const linksContainer = document.getElementById('current-links');
 //-----------------------------LOGIN--------------------------------------
 /**
  * Verify if the user has already logged, to avoid do repeated logins
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`/api/login`, {
                 method:'POST', 
-                headers:{'Content-Type':'application.json'},
+                headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({password})
             });
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadLinksAdm()
     {
         try {
-            const response = await fetch('/api/links');
+            const response = await fetch('/api/links', {cache : 'no-cache'});
             const links = await response.json();
             linksContainer.innerHTML = ''; //clear the current list, before add new
 
@@ -137,6 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             await fetch(`/api/links/${id}`, {
                 method:'PUT',
+                headers:{
+                    'Content-Type':'application/json',
+                    'Authorization':sessionStorage.getItem('token')
+                },
+                body:JSON.stringify({title, url})
+            });
+        }
+        else
+        {
+            //if not, add a new link
+            await fetch('/api/links', {
+                method:'POST',
                 headers:{
                     'Content-Type':'application/json',
                     'Authorization':sessionStorage.getItem('token')
