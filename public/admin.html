@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,20 @@
 </head>
 <body>
     <div id = "login-section">
-        <h2>Acesso Restrito</h2>
+        <h2>Restrict Access</h2>
         <input type = "password" id = "password" placeholder = "Senha">
-        <button onclick = "fazerLogin()">Entrar</button>
+        <button onclick = "doLogin()">Entrar</button>
     </div>
     <div id = "Admin-panel" style = "display:none;">
-        <h2>Gerenciar Links</h2>
-        <div id = "form-adicionar">
+        <h2>Manage Links</h2>
+        <div id = "form-add">
+            <input type = "hidden" id = "link-id">
             <input type = "text" id = "link-title" placeholder = "Titulo do Link (Ex. Instagram)">
             <input type = "url" id = "link-url" placeholder = "URL do link">
-            <button onclick = "adicionarLink()">Adicionar Link</button>
+            <button id = "main-button" onclick = "addOrSave()">Add Link</button>
         </div>
         <hr>
-        <h3>Links Atuais</h3>
+        <h3>Current Links</h3>
         <div id = "current-links">
         </div>
     </div>
