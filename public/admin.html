@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel "stylesheet" href = "style.css">
+</head>
+<body>
+    <div id = "login-section">
+        <h2>Acesso Restrito</h2>
+        <input type = "password" id = "password" placeholder = "Senha">
+        <button onclick = "fazerLogin()">Entrar</button>
+    </div>
+    <div id = "Admin-panel" style = "display:none;">
+        <h2>Gerenciar Links</h2>
+        <div id = "form-adicionar">
+            <input type = "text" id = "link-title" placeholder = "Titulo do Link (Ex. Instagram)">
+            <input type = "url" id = "link-url" placeholder = "URL do link">
+            <button onclick = "adicionarLink()">Adicionar Link</button>
+        </div>
+        <hr>
+        <h3>Links Atuais</h3>
+        <div id = "current-links">
+        </div>
+    </div>
+    <script src = "admin.js"></script>
+</body>
+</html>
