@@ -105,6 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
         URL_input.value = url;
         mainButton.innerText = 'Save';
         form.ScrollIntoView({behavior:'smooth'}); //scroll the page to the form
+
+        linktTitleInput.classList.add('input-highlighted');
+        URL_input.classList.add('input-highlighted');
+
+        setTimeout(() => {
+            linktTitleInput.classList.remove('input-highlighted');
+            URL_input.classList.remove('input-highlighted');
+        }, 500);
     }
 /**
  * Clear the form
@@ -188,6 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
             doLogin();
         }
     });
+    /**
+     * Verify if the edit need to be continued
+     */
+    function handleCancelOnClear() {
+        const isEditing = linkIdInput.value !== '';
+        const areInputsEmpty = linktTitleInput.value.trim() === '' && URL_input.value.trim() === '';
+
+        if(isEditing && areInputsEmpty) resetForm();
+
+        linktTitleInput.addEventListener('input', handleCancelOnClear);
+        URL_input.addEventListener('input', handleCancelOnClear);
+    }
 //------------------------------INITIAL EXECUTION-----------------------------
     //Verify the login
     checkLoginStatus();
