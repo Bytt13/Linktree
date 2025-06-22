@@ -1,0 +1,7 @@
+.avatar {
+  width: 500px;            /* Largura da moldura */
+  height: 500px;           /* Altura da moldura */
+  border-radius: 50%;      /* Deixa a moldura perfeitamente redonda */
+  object-fit: cover;       /* Garante que a foto preencha o círculo sem distorcer */
+  border: 4px solid white; /* Adiciona uma bordinha branca, para dar um charme */
+}

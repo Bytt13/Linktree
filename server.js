@@ -2,7 +2,7 @@ const express = require('express');
 const fs  = require('fs'); //Module to interact with other archives
 const path = require('path');
 const app = express();
-const port = 300; //port where the server will run
+const PORT = 3000; //port where the server will run
 //-------------------------------------------------Middlewares--------------------------------------------
 //public
 app.use(express.static('public'));
@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.use(express.json());
 //-------------------------------------------------Config-------------------------------------------------
 const LINKS_FILE = path.join(__dirname, 'data', 'links.json');
-const ADMIN_PASSWORD = "SuperSecretPassword1234";//In a real project, i would use an envioroment variable
+const ADMIN_PASSWORD = "senha";//In a real project, i would use an envioroment variable
 //-------------------------------------------------Routes-------------------------------------------------
 //Route 1 (Public page)
 app.get('/api/links', (req, res) => {
@@ -95,6 +95,6 @@ app.put('/api/login/:id', (req, res) => {
     });
 });
 //run the server
-app.listen(port, () => {
-    console.log(`Server running in https://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running in https://localhost:${PORT}`);
 });
