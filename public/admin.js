@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
     const adminPanel = document.getElementById('admin-panel');
     const passwordInput = document.getElementById('password');
-    const loginButton = document.querySelector('#login-seciton button');
+    const loginButton = document.querySelector('#login-section button');
     const form = document.getElementById('form-add');
     const linkIdInput = document.getElementById('link-id');
     const linktTitleInput = document.getElementById('link-title');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`/api/login`, {
                 method:'POST', 
-                headers:{'Content-Type':'applciation.json'},
+                headers:{'Content-Type':'application.json'},
                 body:JSON.stringify({password})
             });
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadLinksAdm()
     {
         try {
-            const response = await fetch('/api/login');
+            const response = await fetch('/api/links');
             const links = await response.json();
             linksContainer.innerHTML = ''; //clear the current list, before add new
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = linktTitleInput.value;
         const url = URL_input.value;
 
-        if(!titile || !url)
+        if(!title || !url)
         {
             alert('Please fill the camps of title or url');
             return;
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(confirm('Are you sure you want to delete this link? this action cannot be reverted')) {
             try {
                 await fetch(`/api/links/${id}`, {
-                    mehtod:'DELETE',
+                    method:'DELETE',
                     headers:{'Authorization':sessionStorage.getItem('token')}
                 });
                 loadLinksAdm();

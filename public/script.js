@@ -10,7 +10,7 @@ async function loadLinks()
     container.innerHTML = '';
 
     //Create a button for each link
-    links.array.forEach(link => {
+    links.forEach(link => {
         const button = document.createElement('a');
         button.href = link.url;
         button.target = '_blank'; //Open in a new tab

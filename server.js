@@ -34,7 +34,7 @@ app.post('/api/login', (req, res) => {
     }
 });
 //Route 3 (Add New link)(Protected Action)
-app.post('/api/login', (req, res) => {
+app.post('/api/links', (req, res) => {
     //Simple validatioon of the token
     if(req.headers.authorization !== 'token-for-validation') return res.status(403).send('Access Denied');
     fs.readFile(LINKS_FILE, 'utf8', (err, data) => {
@@ -49,18 +49,19 @@ app.post('/api/login', (req, res) => {
         
         links.push(newLink);
 
-        fs.writeFiles(LINKS_FILE, JSON.stringify(links, null, 2), (err) => {
+        fs.writeFile(LINKS_FILE, JSON.stringify(links, null, 2), (err) => {
             if(err) res.status(500).send('Error saving the link')
             res.status(201).json(newLink);
         });
     });
 });
 //Route 4 (Deleting a link)(Protected Action)
-app.delete('/api/login', (req, res) => {
+app.delete('/api/links/:id', (req, res) => {
     if(req.headers.authorization !== 'token-for-validation') return res.status(403).send('Access Denied');
     fs.readFile(LINKS_FILE, 'utf8', (err, data) => {
         if(err) return res.status(500).send('Error reading the links');
 
+        const linkId= parseInt(req.params.id, 10);
         let links = JSON.parse(data);
         const filteredLinks = links.filter(link => link.id !== linkId);
 
@@ -71,7 +72,7 @@ app.delete('/api/login', (req, res) => {
     });
 });
 //Route 5 (Editing a link)(Protected Action)
-app.put('/api/login/:id', (req, res) => {
+app.put('/api/links/:id', (req, res) => {
     if(req.headers.authorization !== 'token-for-validation') return res.status(403).send('Access Denied');
 
     const linkId= parseInt(req.params.id, 10);
