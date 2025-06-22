@@ -38,7 +38,7 @@ app.post('/api/links', (req, res) => {
     //Simple validatioon of the token
     if(req.headers.authorization !== 'token-for-validation') return res.status(403).send('Access Denied');
     fs.readFile(LINKS_FILE, 'utf8', (err, data) => {
-        if(err) return res.status(500).send('Error reading the links');
+        if(err)return res.status(500).send('Error reading the links');
 
         const links = JSON.parse(data);
         const newLink = {
@@ -50,7 +50,7 @@ app.post('/api/links', (req, res) => {
         links.push(newLink);
 
         fs.writeFile(LINKS_FILE, JSON.stringify(links, null, 2), (err) => {
-            if(err) res.status(500).send('Error saving the link')
+            if(err) return res.status(500).send('Error saving the link')
             res.status(201).json(newLink);
         });
     });
