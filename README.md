@@ -73,3 +73,38 @@ Para rodar este projeto em sua máquina, siga os passos abaixo.
 ## 📂 Estrutura do Projeto
 
 Aqui está uma visão geral dos arquivos e pastas mais importantes:
+
+## 📂 Estrutura do Projeto
+
+Aqui está uma visão geral dos arquivos e pastas mais importantes:
+
+```text
+/
+├── data/
+│   └── links.json        # "Banco de dados" que armazena os links.
+├── node_modules/         # Pasta onde as dependências (Express) são instaladas.
+├── public/
+│   ├── admin.html        # Página de administração para gerenciar os links.
+│   ├── admin.js          # Lógica do front-end para a página de admin.
+│   ├── index.html        # Página principal que exibe os links para os visitantes.
+│   ├── script.js         # Lógica do front-end para buscar e mostrar os links.
+│   └── style.css         # Folha de estilos principal.
+├── .gitignore            # Arquivo que diz ao Git o que ignorar (ex: node_modules).
+├── package-lock.json     # Detalhes exatos das versões das dependências.
+├── package.json          # "RG" do projeto: define nome, scripts e dependências.
+└── server.js             # Coração do projeto: o servidor Express que controla tudo.
+```
+
+## 📝 Como Usar
+
+1.  Inicie o servidor (`node server.js`).
+2.  Abra a página de administração: `http://localhost:3000/admin`.
+3.  Para **adicionar um link**:
+    * Preencha o campo "Título do Link" (o texto que aparecerá no botão).
+    * Preencha o campo "URL do Link" (o destino para onde o botão levará).
+    * Clique em "Adicionar Link".
+4.  Para **remover um link**:
+    * Clique no ícone de lixeira ao lado do link que deseja excluir.
+
+As alterações são salvas automaticamente no arquivo `links.json` e a página principal será atualizada para todos os visitantes.
+
