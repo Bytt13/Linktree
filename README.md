@@ -8,6 +8,9 @@
 
 ## 🎯 O que é o projeto?
 
+![gif](https://github.com/user-attachments/assets/2ef61af5-9173-4ef6-abc4-406c8241bca4")
+
+
 Este projeto é uma versão simplificada e de código aberto do popular serviço **Linktree**. Ele cria uma página única e personalizável que centraliza todos os seus links importantes (redes sociais, portfólio, projetos, etc.) em um só lugar.
 
 Pense nele como um **cartão de visita digital**. Em vez de entregar vários cartões ou passar vários links para alguém, você compartilha apenas um. Ao acessá-lo, a pessoa vê uma lista organizada de todos os seus outros links, facilitando o acesso a tudo o que você quer mostrar.
