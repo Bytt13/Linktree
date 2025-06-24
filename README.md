@@ -20,6 +20,9 @@ A principal vantagem é que, por ser auto-hospedado (*self-hosted*), você tem t
 ## ✨ Funcionalidades Principais
 
 * **Página de Links:** Exibe uma lista de botões, onde cada um redireciona para uma URL diferente.
+
+![Image](https://github.com/user-attachments/assets/1f01d9f0-2c16-4d28-b349-d25b12c89d67)
+
 * **Painel de Administração:** Uma página simples e protegida em `/admin` para adicionar e remover links dinamicamente.
 * **Armazenamento em JSON:** Utiliza um arquivo `links.json` como um "banco de dados" simples, tornando o projeto leve e fácil de gerenciar.
 * **Front-end Limpo:** Interface de usuário minimalista e funcional, fácil de personalizar.
