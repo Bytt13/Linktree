@@ -15,8 +15,6 @@ Este projeto é uma versão simplificada e de código aberto do popular serviço
 
 Pense nele como um **cartão de visita digital**. Em vez de entregar vários cartões ou passar vários links para alguém, você compartilha apenas um. Ao acessá-lo, a pessoa vê uma lista organizada de todos os seus outros links, facilitando o acesso a tudo o que você quer mostrar.
 
-A principal vantagem é que, por ser auto-hospedado (*self-hosted*), você tem total controle sobre seus dados e aparência, sem depender de uma plataforma de terceiros.
-
 ## ✨ Funcionalidades Principais
 
 * **Página de Links:** Exibe uma lista de botões, onde cada um redireciona para uma URL diferente.
