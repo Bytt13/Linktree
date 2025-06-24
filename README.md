@@ -98,7 +98,7 @@ Aqui está uma visão geral dos arquivos e pastas mais importantes:
 └── server.js             # Coração do projeto: o servidor Express que controla tudo.
 ```
 
-## 📝 Como Usar
+## 📝 Como Usar + GIFs caso queira visualizar como funciona
 
 1.  Inicie o servidor (`node server.js`).
 2.  Abra a página de administração: `http://localhost:3000/admin`.
