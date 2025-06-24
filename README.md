@@ -8,7 +8,7 @@
 
 ## 🎯 O que é o projeto?
 
-![gif](https://github.com/user-attachments/assets/2ef61af5-9173-4ef6-abc4-406c8241bca4")
+<img width="1282" alt="Image" src="https://github.com/user-attachments/assets/2ef61af5-9173-4ef6-abc4-406c8241bca4" />
 
 
 Este projeto é uma versão simplificada e de código aberto do popular serviço **Linktree**. Ele cria uma página única e personalizável que centraliza todos os seus links importantes (redes sociais, portfólio, projetos, etc.) em um só lugar.
