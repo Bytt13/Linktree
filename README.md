@@ -112,7 +112,7 @@ Aqui está uma visão geral dos arquivos e pastas mais importantes:
 ![Jun-24-2025 14-34-16](https://github.com/user-attachments/assets/22ea7f47-5716-4ecf-bede-052fa9186553)
 
 5.  Para **remover um link**:
-    * Clique no ícone de lixeira ao lado do link que deseja excluir.
+    * Clique no botão de "Delete" ao lado do link que deseja excluir.
 
 ![Image](https://github.com/user-attachments/assets/6baab1a2-a4c9-480b-b0e6-12fce6adaf1f)
 
