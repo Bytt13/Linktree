@@ -95,11 +95,12 @@ Aqui está uma visão geral dos arquivos e pastas mais importantes:
 
 1.  Inicie o servidor (`node server.js`).
 2.  Abra a página de administração: `http://localhost:3000/admin`.
-3.  Para **adicionar um link**:
+3.  Use a senha "senha" para entrar (caso precise)
+4.  Para **adicionar um link**:
     * Preencha o campo "Título do Link" (o texto que aparecerá no botão).
     * Preencha o campo "URL do Link" (o destino para onde o botão levará).
     * Clique em "Adicionar Link".
-4.  Para **remover um link**:
+5.  Para **remover um link**:
     * Clique no ícone de lixeira ao lado do link que deseja excluir.
 
 As alterações são salvas automaticamente no arquivo `links.json` e a página principal será atualizada para todos os visitantes.
