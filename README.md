@@ -118,3 +118,10 @@ Aqui está uma visão geral dos arquivos e pastas mais importantes:
 
 As alterações são salvas automaticamente no arquivo `links.json` e a página principal será atualizada para todos os visitantes.
 
+6.  Para **editar um link**:
+    * Clique no botão de "Edit" ao lado do link que deseja editar, e edite o titulo, ou URL dele, mantendo sempre os dois campos preenchidos.
+
+![Image](https://github.com/user-attachments/assets/052234cd-f0fd-43cc-9fa6-9b71c220f5d3)
+
+![Image](https://github.com/user-attachments/assets/89d68ca9-216c-40ad-8007-078e650d8e64)
+
