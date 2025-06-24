@@ -74,10 +74,6 @@ Para rodar este projeto em sua máquina, siga os passos abaixo.
 
 Aqui está uma visão geral dos arquivos e pastas mais importantes:
 
-## 📂 Estrutura do Projeto
-
-Aqui está uma visão geral dos arquivos e pastas mais importantes:
-
 ```text
 /
 ├── data/
