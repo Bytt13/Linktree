@@ -53,9 +53,8 @@ Para rodar este projeto em sua máquina, siga os passos abaixo.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone [https://github.com/Bytt13/Linktree.git](https://github.com/Bytt13/Linktree.git)
     ```
-    *Substitua `seu-usuario/seu-repositorio.git` pela URL real do seu repositório no GitHub.*
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
