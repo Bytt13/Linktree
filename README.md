@@ -44,7 +44,7 @@ Este projeto foi construído com as seguintes tecnologias:
 
 ## 🚀 Como Executar o Projeto Localmente ou acessar via link
 
-[Para acessar, clique aqui](https://linktree-8eio.onrender.com)
+[Para acessar, clique aqui](https://linktree-8eio.onrender.com), caso o servidor precise ser ativado por conta do deploy gratuito, espere no maximo 1 minuto.
 
 Para rodar este projeto em sua máquina, siga os passos abaixo.
 
