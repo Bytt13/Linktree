@@ -54,7 +54,7 @@ To run this project on your machine, follow the steps below.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Bytt13/Linktree.git](https://github.com/Bytt13/Linktree.git)
+    git clone https://github.com/Bytt13/Linktree.git
     ```
 
 2.  **Navigate to the project folder:**
