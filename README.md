@@ -60,7 +60,7 @@ Para rodar este projeto em sua máquina, siga os passos abaixo.
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd nome-da-pasta-do-projeto
+    cd Linktree
     ```
 
 3.  **Instale as dependências:**
@@ -98,7 +98,100 @@ Aqui está uma visão geral dos arquivos e pastas mais importantes:
 ├── package.json          # "RG" do projeto: define nome, scripts e dependências.
 └── server.js             # Coração do projeto: o servidor Express que controla tudo.
 ```
+## 🔩 Endpoints da API
 
+A API foi construída para gerenciar uma lista de links e é protegida por um sistema de autenticação simples baseado em token.
+
+### Autenticação
+
+Para realizar ações de administrador (adicionar, editar, deletar), é necessário primeiro fazer login para obter um token e depois enviar este token no cabeçalho `Authorization` de cada requisição protegida.
+
+---
+
+### **1. Login de Administrador**
+
+- `POST /api/login`
+    - **Descrição:** Autentica o usuário administrador.
+    - **Proteção:** Nenhuma.
+    - **Corpo da Requisição (Body):**
+        ```json
+        {
+          "password": "a_senha_correta"
+        }
+        ```
+    - **Resposta (Sucesso 200):** Retorna um token de acesso.
+        ```json
+        {
+          "success": true,
+          "token": "token-for-validation"
+        }
+        ```
+    - **Resposta (Falha 401):** Senha incorreta.
+        ```json
+        {
+          "success": false,
+          "message": "Password Incorrect"
+        }
+        ```
+
+---
+
+### **2. Gerenciamento de Links**
+
+#### **Listar todos os links**
+
+- `GET /api/links`
+    - **Descrição:** Retorna uma lista com todos os links atualmente salvos.
+    - **Proteção:** Nenhuma. Este endpoint é público.
+    - **Resposta (Sucesso 200):** Um array de objetos, onde cada objeto é um link.
+        ```json
+        [
+          {
+            "id": 1678886400000,
+            "title": "Meu Portfólio",
+            "url": "[https://meu-site.com](https://meu-site.com)"
+          }
+        ]
+        ```
+
+#### **Adicionar um novo link**
+
+- `POST /api/links`
+    - **Descrição:** Cria e salva um novo link.
+    - **Proteção:** **Sim.** Requer o token no cabeçalho `Authorization`.
+    - **Corpo da Requisição (Body):**
+        ```json
+        {
+          "title": "Título do Novo Link",
+          "url": "[https://novo-link.com](https://novo-link.com)"
+        }
+        ```
+    - **Resposta (Sucesso 201):** Retorna o objeto do link recém-criado.
+
+#### **Editar um link existente**
+
+- `PUT /api/links/:id`
+    - **Descrição:** Atualiza o título e a URL de um link específico, identificado pelo seu `id`.
+    - **Proteção:** **Sim.** Requer o token no cabeçalho `Authorization`.
+    - **Parâmetro de URL:** `id` (o identificador numérico do link a ser editado).
+    - **Corpo da Requisição (Body):**
+        ```json
+        {
+          "title": "Título Atualizado",
+          "url": "[https://link-atualizado.com](https://link-atualizado.com)"
+        }
+        ```
+    - **Resposta (Sucesso 200):** `link edited successfully`
+    - **Resposta (Falha 404):** `Link not found`
+
+#### **Deletar um link**
+
+- `DELETE /api/links/:id`
+    - **Descrição:** Remove um link específico do sistema, identificado pelo seu `id`.
+    - **Proteção:** **Sim.** Requer o token no cabeçalho `Authorization`.
+    - **Parâmetro de URL:** `id` (o identificador numérico do link a ser deletado).
+    - **Resposta (Sucesso 200):** `link deleted successfully`
+    - 
 ## 📝 Como Usar + GIFs caso queira visualizar como funciona
 
 1.  Inicie o servidor (`node server.js`).
