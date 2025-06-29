@@ -42,7 +42,9 @@ Este projeto foi construído com as seguintes tecnologias:
 * **Dados:**
     * **JSON:** Formato leve para armazenar e trocar os dados dos links.
 
-## 🚀 Como Executar o Projeto Localmente
+## 🚀 Como Executar o Projeto Localmente ou acessar via link
+
+[Para acessar, clique aqui](https://linktree-8eio.onrender.com)
 
 Para rodar este projeto em sua máquina, siga os passos abaixo.
 
